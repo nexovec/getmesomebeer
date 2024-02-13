@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" data-lt-installed="true" class="vvgxkmuas idc0_343">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="google" content="notranslate" />
+    <meta
+      name="description"
+      content="The first CSS framework based on Material Design 3. 10x smaller than others CSS frameworks based on Material Design. Translates Material Design to HTML semantic standard. Ready to use with any JS framework. Highly focused on DX."
+    />
+    <title>Youtube - Beer CSS</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.4.13/dist/cdn/beer.min.css" rel="stylesheet" />
+    <link href="/app.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/page-js@1.7.3/page.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.4.13/dist/cdn/beer.min.js"></script>
+
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0PZF7Z0XQ7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-0PZF7Z0XQ7");
+    </script>
+
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2265410, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+    <script async="" src="https://static.hotjar.com/c/hotjar-2265410.js?sv=6"></script>
+  </head>
+
+  <body
+    class="dark"
+    style="
+      --primary: #cfbcff;
+      --on-primary: #381e72;
+      --primary-container: #4f378a;
+      --on-primary-container: #e9ddff;
+      --secondary: #cbc2db;
+      --on-secondary: #332d41;
+      --secondary-container: #4a4458;
+      --on-secondary-container: #e8def8;
+      --tertiary: #efb8c8;
+      --on-tertiary: #4a2532;
+      --tertiary-container: #633b48;
+      --on-tertiary-container: #ffd9e3;
+      --error: #ffb4ab;
+      --on-error: #690005;
+      --error-container: #93000a;
+      --on-error-container: #ffb4ab;
+      --background: #1c1b1e;
+      --on-background: #e6e1e6;
+      --surface: #141316;
+      --on-surface: #e6e1e6;
+      --surface-variant: #49454e;
+      --on-surface-variant: #cac4cf;
+      --outline: #948f99;
+      --outline-variant: #49454e;
+      --shadow: #000000;
+      --scrim: #000000;
+      --inverse-surface: #e6e1e6;
+      --inverse-on-surface: #313033;
+      --inverse-primary: #6750a4;
+      --surface-dim: #141316;
+      --surface-bright: #3a383c;
+      --surface-container-lowest: #0f0e11;
+      --surface-container-low: #1c1b1e;
+      --surface-container: #201f22;
+      --surface-container-high: #2b292d;
+      --surface-container-highest: #363438;
+    "
+  >
+    <div id="app" data-v-app="">
+      <div id="layout">
+        <nav class="left m l">
+          <header></header>
+          <a href="/youtube" class="active"
+            ><i>home</i>
+            <div>Home</div></a
+          ><a href="/youtube/whats-hot" class=""
+            ><i>whatshot</i>
+            <div>What's hot</div></a
+          ><a href="/youtube/subscriptions" class=""
+            ><i>subscriptions</i>
+            <div>Subscript</div></a
+          ><a href="/youtube/library" class=""
+            ><i>video_library</i>
+            <div>Library</div></a
+          ><a data-ui="#themes1"
+            ><i>palette</i>
+            <div>Themes</div></a
+          >
+          <div data-v-17a5b1f9="" class="overlay"></div>
+          <dialog data-v-17a5b1f9="" class="medium left" id="themes1">
+            <div class="large-space"></div>
+            <div class="medium-space"></div>
+            <header data-v-17a5b1f9="" class="fixed">
+              <nav data-v-17a5b1f9="">
+                <div data-v-17a5b1f9="" class="max">
+                  <h5 data-v-17a5b1f9="">
+                    <span data-v-17a5b1f9="">Themes</span
+                    ><a data-v-17a5b1f9="" class="chip circle"><i data-v-17a5b1f9="">code</i></a>
+                  </h5>
+                </div>
+                <button data-v-17a5b1f9="" class="circle transparent" data-ui="#themes1">
+                  <i data-v-17a5b1f9="">close</i>
+                </button>
+              </nav>
+              <!---->
+            </header>
+            <div data-v-17a5b1f9="">
+              <nav data-v-17a5b1f9="" class="wrap">
+                <a data-v-17a5b1f9="" class="chip circle small"><i data-v-17a5b1f9="">light_mode</i></a
+                ><a data-v-17a5b1f9="" class="chip circle"
+                  ><i data-v-17a5b1f9="">palette</i><input data-v-17a5b1f9="" type="color" /></a
+                ><a data-v-17a5b1f9="" class="chip circle"
+                  ><i data-v-17a5b1f9="">upload</i><input data-v-17a5b1f9="" type="file" /></a
+                ><button data-v-17a5b1f9="" class="circle small red"></button
+                ><button data-v-17a5b1f9="" class="circle small pink"></button
+                ><button data-v-17a5b1f9="" class="circle small purple"></button
+                ><button data-v-17a5b1f9="" class="circle small deep-purple"></button
+                ><button data-v-17a5b1f9="" class="circle small indigo"></button
+                ><button data-v-17a5b1f9="" class="circle small blue"></button
+                ><button data-v-17a5b1f9="" class="circle small light-blue"></button
+                ><button data-v-17a5b1f9="" class="circle small cyan"></button
+                ><button data-v-17a5b1f9="" class="circle small teal"></button
+                ><button data-v-17a5b1f9="" class="circle small green"></button
+                ><button data-v-17a5b1f9="" class="circle small light-green"></button
+                ><button data-v-17a5b1f9="" class="circle small lime"></button
+                ><button data-v-17a5b1f9="" class="circle small yellow"></button
+                ><button data-v-17a5b1f9="" class="circle small amber"></button
+                ><button data-v-17a5b1f9="" class="circle small orange"></button
+                ><button data-v-17a5b1f9="" class="circle small deep-orange"></button
+                ><button data-v-17a5b1f9="" class="circle small brown"></button
+                ><button data-v-17a5b1f9="" class="circle small grey"></button
+                ><button data-v-17a5b1f9="" class="circle small blue-grey"></button
+                ><button data-v-17a5b1f9="" class="circle small black"></button
+                ><button data-v-17a5b1f9="" class="circle small white"></button>
+              </nav>
+            </div>
+            <!---->
+          </dialog>
+        </nav>
+        <nav class="bottom s">
+          <a href="/youtube" class="active"
+            ><i>home</i>
+            <div>Home</div></a
+          ><a href="/youtube/explore" class=""
+            ><i>explore</i>
+            <div>Explore</div></a
+          ><a class="button square round extra fill" data-ui="#dialog-add"><i>add</i></a
+          ><a href="/youtube/library" class=""
+            ><i>video_library</i>
+            <div>Library</div></a
+          ><a data-ui="#themes2"
+            ><i>palette</i>
+            <div>Themes</div></a
+          >
+          <div data-v-17a5b1f9="" class="overlay"></div>
+          <dialog data-v-17a5b1f9="" class="medium left" id="themes2">
+            <div class="large-space"></div>
+            <div class="medium-space"></div>
+            <header data-v-17a5b1f9="" class="fixed">
+              <nav data-v-17a5b1f9="">
+                <div data-v-17a5b1f9="" class="max">
+                  <h5 data-v-17a5b1f9="">
+                    <span data-v-17a5b1f9="">Themes</span
+                    ><a data-v-17a5b1f9="" class="chip circle"><i data-v-17a5b1f9="">code</i></a>
+                  </h5>
+                </div>
+                <button data-v-17a5b1f9="" class="circle transparent" data-ui="#themes2">
+                  <i data-v-17a5b1f9="">close</i>
+                </button>
+              </nav>
+              <!---->
+            </header>
+            <div data-v-17a5b1f9="">
+              <nav data-v-17a5b1f9="" class="wrap">
+                <a data-v-17a5b1f9="" class="chip circle small"><i data-v-17a5b1f9="">light_mode</i></a
+                ><a data-v-17a5b1f9="" class="chip circle"
+                  ><i data-v-17a5b1f9="">palette</i><input data-v-17a5b1f9="" type="color" /></a
+                ><a data-v-17a5b1f9="" class="chip circle"
+                  ><i data-v-17a5b1f9="">upload</i><input data-v-17a5b1f9="" type="file" /></a
+                ><button data-v-17a5b1f9="" class="circle small red"></button
+                ><button data-v-17a5b1f9="" class="circle small pink"></button
+                ><button data-v-17a5b1f9="" class="circle small purple"></button
+                ><button data-v-17a5b1f9="" class="circle small deep-purple"></button
+                ><button data-v-17a5b1f9="" class="circle small indigo"></button
+                ><button data-v-17a5b1f9="" class="circle small blue"></button
+                ><button data-v-17a5b1f9="" class="circle small light-blue"></button
+                ><button data-v-17a5b1f9="" class="circle small cyan"></button
+                ><button data-v-17a5b1f9="" class="circle small teal"></button
+                ><button data-v-17a5b1f9="" class="circle small green"></button
+                ><button data-v-17a5b1f9="" class="circle small light-green"></button
+                ><button data-v-17a5b1f9="" class="circle small lime"></button
+                ><button data-v-17a5b1f9="" class="circle small yellow"></button
+                ><button data-v-17a5b1f9="" class="circle small amber"></button
+                ><button data-v-17a5b1f9="" class="circle small orange"></button
+                ><button data-v-17a5b1f9="" class="circle small deep-orange"></button
+                ><button data-v-17a5b1f9="" class="circle small brown"></button
+                ><button data-v-17a5b1f9="" class="circle small grey"></button
+                ><button data-v-17a5b1f9="" class="circle small blue-grey"></button
+                ><button data-v-17a5b1f9="" class="circle small black"></button
+                ><button data-v-17a5b1f9="" class="circle small white"></button>
+              </nav>
+            </div>
+            <!---->
+          </dialog>
+        </nav>
+        <nav class="top">
+          <button class="circle large transparent m l small-margin" data-ui="#dialog-expanded"><i>menu</i></button
+          ><img src="/youtube-light.png" style="display: none" /><img src="/youtube-dark.png" />
+          <div class="max"></div>
+          <div class="max field round suffix prefix small no-margin m l white black-text">
+            <i class="front">search</i><input type="text" placeholder=" " /><i class="front">mic</i>
+          </div>
+          <div class="max"></div>
+          <button class="circle large transparent s" data-ui="#dialog-search"><i>search</i></button
+          ><button class="circle large transparent m l" data-ui="#menu-add">
+            <i>video_call</i
+            ><menu class="left no-wrap" id="menu-add" data-ui="#menu-add"
+              ><a class="row"
+                ><div class="min"><i>upload</i></div>
+                <div class="min">Send a video</div></a
+              ><a class="row"
+                ><div class="min"><i>sensors</i></div>
+                <div class="min">Broadcast live</div></a
+              ></menu
+            ></button
+          ><button class="circle large transparent m l" data-ui="#menu-apps">
+            <i>apps</i
+            ><menu class="left no-wrap" id="menu-apps" data-ui="#menu-apps"
+              ><a class="row"
+                ><div class="min"><img src="/youtube.png" /></div>
+                <div class="min">Youtube TV</div></a
+              >
+              <div class="small-divider"></div>
+              <a class="row"
+                ><div class="min"><img src="/youtube.png" /></div>
+                <div class="min">Youtube Music</div></a
+              ><a class="row"
+                ><div class="min"><img src="/youtube.png" /></div>
+                <div class="min">Youtube Kids</div></a
+              ></menu
+            ></button
+          ><button class="circle large transparent" data-ui="#dialog-notifications"><i>notifications</i></button
+          ><button class="circle large small-margin transparent"><img class="responsive" src="/favicon.png" /></button>
+        </nav>
+        <div class="overlay"></div>
+        <dialog class="right" id="dialog-notifications">
+          <nav>
+            <h5 class="max">Notifications</h5>
+            <button class="circle transparent" data-ui="#dialog-notifications"><i>close</i></button>
+          </nav>
+          <p>No new notifications here</p>
+        </dialog>
+        <div class="overlay"></div>
+        <dialog class="left small" id="dialog-expanded">
+          <header class="fixed">
+            <nav>
+              <button class="transparent circle large" data-ui="#dialog-expanded"><i>menu</i></button
+              ><a><img src="/youtube-light.png" style="display: none" /><img src="/youtube-dark.png" /></a>
+            </nav>
+          </header>
+          <a class="row round" data-ui="#dialog-expanded" href="/youtube"
+            ><i>home</i>
+            <div>Home</div></a
+          ><a class="row round" data-ui="#dialog-expanded" href="/youtube/whats-hot"
+            ><i>whatshot</i>
+            <div>What's hot</div></a
+          ><a class="row round" data-ui="#dialog-expanded" href="/youtube/subscriptions"
+            ><i>subscriptions</i>
+            <div>Subscript</div></a
+          ><a class="row round" data-ui="#dialog-expanded" href="/youtube/library"
+            ><i>video_library</i>
+            <div>Library</div></a
+          >
+          <div class="small-divider"></div>
+          <a class="row round" data-ui="#dialog-expanded"
+            ><i>history</i>
+            <div>History</div></a
+          ><a class="row round" data-ui="#dialog-expanded"
+            ><i>slideshow</i>
+            <div>Your videos</div></a
+          ><a class="row round" data-ui="#dialog-expanded"
+            ><i>playlist_play</i>
+            <div>Your albuns</div></a
+          ><a class="row round" data-ui="#dialog-expanded"
+            ><i>watch_later</i>
+            <div>Watch later</div></a
+          >
+        </dialog>
+        <div class="overlay"></div>
+        <dialog class="bottom top-round" id="dialog-add">
+          <nav>
+            <h5 class="max">New</h5>
+            <button class="circle transparent" data-ui="#dialog-add"><i>close</i></button>
+          </nav>
+          <a class="row"
+            ><div class="min"><i>upload</i></div>
+            <div class="min"><span>Send a video</span></div></a
+          ><a class="row"
+            ><div class="min"><i>sensors</i></div>
+            <div class="min"><span>Broadcast live</span></div></a
+          >
+        </dialog>
+        <div class="overlay"></div>
+        <dialog class="top transparent" id="dialog-search">
+          <div class="field round suffix prefix small no-margin white black-text">
+            <i class="front">search</i><input type="text" placeholder=" " /><i class="front">mic</i>
+          </div>
+        </dialog>
+        <div class="medium-space"></div>
+        <!---->
+        <main class="responsive" style="">
+          <div class="page right active">
+            <nav class="scroll">
+              <a class="chip fill"><i class="small">done</i><span>The best of 2020</span></a
+              ><a class="chip">Documentaries</a><a class="chip">Rock and roll</a><a class="chip">Others</a>
+            </nav>
+            <div class="space"></div>
+            <div class="grid">
+              <div class="s12 m6 l3">
+                <article class="no-padding transparent">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="small-padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok 01/2021</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent" data-ui="#menu-0">
+                        <i>more_vert</i
+                        ><menu class="left no-wrap" id="menu-0" data-ui="#menu-0"
+                          ><a>Save to library</a><a>Watch later</a><a>Like it</a></menu
+                        >
+                      </button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="s12 m6 l3">
+                <article class="no-padding transparent">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="small-padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok 01/2020</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent" data-ui="#menu-1">
+                        <i>more_vert</i
+                        ><menu class="left no-wrap" id="menu-1" data-ui="#menu-1"
+                          ><a>Save to library</a><a>Watch later</a><a>Like it</a></menu
+                        >
+                      </button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="s12 m6 l3">
+                <article class="no-padding transparent">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="small-padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Best of 2021</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent" data-ui="#menu-2">
+                        <i>more_vert</i
+                        ><menu class="left no-wrap" id="menu-2" data-ui="#menu-2"
+                          ><a>Save to library</a><a>Watch later</a><a>Like it</a></menu
+                        >
+                      </button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="s12 m6 l3">
+                <article class="no-padding transparent">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="small-padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Best of 2020</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent" data-ui="#menu-3">
+                        <i>more_vert</i
+                        ><menu class="left no-wrap" id="menu-3" data-ui="#menu-3"
+                          ><a>Save to library</a><a>Watch later</a><a>Like it</a></menu
+                        >
+                      </button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="s12 m6 l3">
+                <article class="no-padding transparent">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="small-padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Radio online</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent" data-ui="#menu-4">
+                        <i>more_vert</i
+                        ><menu class="left no-wrap" id="menu-4" data-ui="#menu-4"
+                          ><a>Save to library</a><a>Watch later</a><a>Like it</a></menu
+                        >
+                      </button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="s12 m6 l3">
+                <article class="no-padding transparent">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="small-padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok, Zebra, Iro - Ocean</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent" data-ui="#menu-5">
+                        <i>more_vert</i
+                        ><menu class="left no-wrap" id="menu-5" data-ui="#menu-5"
+                          ><a>Save to library</a><a>Watch later</a><a>Like it</a></menu
+                        >
+                      </button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="s12 m6 l3">
+                <article class="no-padding transparent">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="small-padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok 01/2021</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent" data-ui="#menu-6">
+                        <i>more_vert</i
+                        ><menu class="left no-wrap" id="menu-6" data-ui="#menu-6"
+                          ><a>Save to library</a><a>Watch later</a><a>Like it</a></menu
+                        >
+                      </button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="s12 m6 l3">
+                <article class="no-padding transparent">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="small-padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok 01/2020</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent" data-ui="#menu-7">
+                        <i>more_vert</i
+                        ><menu class="left no-wrap" id="menu-7" data-ui="#menu-7"
+                          ><a>Save to library</a><a>Watch later</a><a>Like it</a></menu
+                        >
+                      </button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="large-divider"></div>
+            <h5>What's hot</h5>
+            <div class="row scroll">
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Best of 2021</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Best of 2020</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Radio online</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok, Zebra, Iro - Ocean</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok 01/2021</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok 01/2020</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Best of 2021</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Best of 2020</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="large-divider"></div>
+            <h5>Your videos</h5>
+            <div class="row scroll">
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Radio online</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok, Zebra, Iro - Ocean</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok 01/2021</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok 01/2020</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Best of 2021</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Best of 2020</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Radio online</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+              <div class="min">
+                <article class="no-padding border transparent small-width">
+                  <a class="wave"
+                    ><img class="responsive" src="https://placehold.co/600x400" />
+                    <div class="absolute right bottom small-margin black white-text small-text">&nbsp;00:00:00&nbsp;</div></a
+                  >
+                  <div class="padding">
+                    <nav>
+                      <div class="max truncate">
+                        <div class="bold">Alok, Zebra, Iro - Ocean</div>
+                        <div>10k views</div>
+                      </div>
+                      <button class="circle transparent"><i>thumb_up</i></button>
+                    </nav>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!----><!----><!---->
+      </div>
+    </div>
+    <script src="/__/firebase/8.2.9/firebase-app.js"></script>
+    <script src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
