@@ -1,0 +1,930 @@
+<html lang="en" translate="no" data-lt-installed="true" class="vvgxkmuas idc0_343 blusug vxgmrrba">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="google" content="notranslate" />
+    <meta
+      name="description"
+      content="The first CSS framework based on Material Design 3. 10x smaller than others CSS frameworks based on Material Design. Translates Material Design to HTML semantic standard. Ready to use with any JS framework. Highly focused on DX."
+    />
+    <title>Gmail - Beer CSS</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.4.13/dist/cdn/beer.min.css" rel="stylesheet" />
+    <link href="/app.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/page-js@1.7.3/page.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.4.13/dist/cdn/beer.min.js"></script>
+
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0PZF7Z0XQ7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-0PZF7Z0XQ7");
+    </script>
+
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2265410, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+    <script async="" src="https://static.hotjar.com/c/hotjar-2265410.js?sv=6"></script>
+  </head>
+
+  <body
+    class="dark"
+    style="
+      --primary: #cfbcff;
+      --on-primary: #381e72;
+      --primary-container: #4f378a;
+      --on-primary-container: #e9ddff;
+      --secondary: #cbc2db;
+      --on-secondary: #332d41;
+      --secondary-container: #4a4458;
+      --on-secondary-container: #e8def8;
+      --tertiary: #efb8c8;
+      --on-tertiary: #4a2532;
+      --tertiary-container: #633b48;
+      --on-tertiary-container: #ffd9e3;
+      --error: #ffb4ab;
+      --on-error: #690005;
+      --error-container: #93000a;
+      --on-error-container: #ffb4ab;
+      --background: #1c1b1e;
+      --on-background: #e6e1e6;
+      --surface: #141316;
+      --on-surface: #e6e1e6;
+      --surface-variant: #49454e;
+      --on-surface-variant: #cac4cf;
+      --outline: #948f99;
+      --outline-variant: #49454e;
+      --shadow: #000000;
+      --scrim: #000000;
+      --inverse-surface: #e6e1e6;
+      --inverse-on-surface: #313033;
+      --inverse-primary: #6750a4;
+      --surface-dim: #141316;
+      --surface-bright: #3a383c;
+      --surface-container-lowest: #0f0e11;
+      --surface-container-low: #1c1b1e;
+      --surface-container: #201f22;
+      --surface-container-high: #2b292d;
+      --surface-container-highest: #363438;
+    "
+  >
+    <div id="app" data-v-app="">
+      <div>
+        <nav class="left m l medium-space">
+          <div class="space"></div>
+          <div class="space"></div>
+          <a class="button fill square round extra" data-ui="#dialog-add"><i>add</i></a
+          ><a href="/gmail" class="active"
+            ><i>inbox</i>
+            <div class="tooltip right">Inbox</div></a
+          ><a href="/gmail/snoozed" class=""
+            ><i>watch_later</i>
+            <div class="tooltip right">Snoozed</div></a
+          ><a href="/gmail/important" class=""
+            ><i>label_important</i>
+            <div class="tooltip right">Important</div></a
+          ><a href="/gmail/sent" class=""
+            ><i>send</i>
+            <div class="tooltip right">Sent</div></a
+          ><a href="/gmail/drafts" class=""
+            ><i>insert_drive_file</i>
+            <div class="tooltip right">Drafts</div></a
+          ><a href="/gmail/spam" class=""
+            ><i>error_outline</i>
+            <div class="tooltip right">Spam</div></a
+          ><a data-ui="#themes1"
+            ><i>palette</i>
+            <div class="tooltip right">Themes</div></a
+          >
+          <div data-v-17a5b1f9="" class="overlay"></div>
+          <dialog data-v-17a5b1f9="" class="medium left" id="themes1">
+            <div class="large-space"></div>
+            <div class="medium-space"></div>
+            <header data-v-17a5b1f9="" class="fixed">
+              <nav data-v-17a5b1f9="">
+                <div data-v-17a5b1f9="" class="max">
+                  <h5 data-v-17a5b1f9="">
+                    <span data-v-17a5b1f9="">Themes</span
+                    ><a data-v-17a5b1f9="" class="chip circle"><i data-v-17a5b1f9="">code</i></a>
+                  </h5>
+                </div>
+                <button data-v-17a5b1f9="" class="circle transparent" data-ui="#themes1">
+                  <i data-v-17a5b1f9="">close</i>
+                </button>
+              </nav>
+              <!---->
+            </header>
+            <div data-v-17a5b1f9="">
+              <nav data-v-17a5b1f9="" class="wrap">
+                <a data-v-17a5b1f9="" class="chip circle small"><i data-v-17a5b1f9="">light_mode</i></a
+                ><a data-v-17a5b1f9="" class="chip circle"
+                  ><i data-v-17a5b1f9="">palette</i><input data-v-17a5b1f9="" type="color" /></a
+                ><a data-v-17a5b1f9="" class="chip circle"
+                  ><i data-v-17a5b1f9="">upload</i><input data-v-17a5b1f9="" type="file" /></a
+                ><button data-v-17a5b1f9="" class="circle small red"></button
+                ><button data-v-17a5b1f9="" class="circle small pink"></button
+                ><button data-v-17a5b1f9="" class="circle small purple"></button
+                ><button data-v-17a5b1f9="" class="circle small deep-purple"></button
+                ><button data-v-17a5b1f9="" class="circle small indigo"></button
+                ><button data-v-17a5b1f9="" class="circle small blue"></button
+                ><button data-v-17a5b1f9="" class="circle small light-blue"></button
+                ><button data-v-17a5b1f9="" class="circle small cyan"></button
+                ><button data-v-17a5b1f9="" class="circle small teal"></button
+                ><button data-v-17a5b1f9="" class="circle small green"></button
+                ><button data-v-17a5b1f9="" class="circle small light-green"></button
+                ><button data-v-17a5b1f9="" class="circle small lime"></button
+                ><button data-v-17a5b1f9="" class="circle small yellow"></button
+                ><button data-v-17a5b1f9="" class="circle small amber"></button
+                ><button data-v-17a5b1f9="" class="circle small orange"></button
+                ><button data-v-17a5b1f9="" class="circle small deep-orange"></button
+                ><button data-v-17a5b1f9="" class="circle small brown"></button
+                ><button data-v-17a5b1f9="" class="circle small grey"></button
+                ><button data-v-17a5b1f9="" class="circle small blue-grey"></button
+                ><button data-v-17a5b1f9="" class="circle small black"></button
+                ><button data-v-17a5b1f9="" class="circle small white"></button>
+              </nav>
+            </div>
+            <!---->
+          </dialog>
+        </nav>
+        <nav class="right m l">
+          <div class="medium-space"></div>
+          <div class="space"></div>
+          <button class="circle transparent large">
+            <span class="tooltip left">Calendar</span><img class="no-round" src="/calendar.png" /></button
+          ><button class="circle transparent large">
+            <span class="tooltip left">Keep</span><img class="no-round" src="/keep.png" /></button
+          ><button class="circle transparent large">
+            <span class="tooltip left">Tasks</span><img class="no-round" src="/tasks.png" /></button
+          ><button class="circle transparent large">
+            <span class="tooltip left">Contacts</span><img class="no-round" src="/contacts.png" />
+          </button>
+        </nav>
+        <nav class="bottom s">
+          <a href="/gmail" class="active"
+            ><i>inbox</i>
+            <div>Inbox</div></a
+          ><a href="/gmail/sent" class=""
+            ><i>send</i>
+            <div>Sent</div></a
+          ><a class="button fill square round extra" data-ui="#dialog-add-small"><i>add</i></a
+          ><a href="/gmail/drafts" class=""
+            ><i>insert_drive_file</i>
+            <div>Drafts</div></a
+          ><a data-ui="#themes2"
+            ><i>palette</i>
+            <div>Theme</div></a
+          >
+          <div data-v-17a5b1f9="" class="overlay"></div>
+          <dialog data-v-17a5b1f9="" class="medium left" id="themes2">
+            <div class="large-space"></div>
+            <div class="medium-space"></div>
+            <header data-v-17a5b1f9="" class="fixed">
+              <nav data-v-17a5b1f9="">
+                <div data-v-17a5b1f9="" class="max">
+                  <h5 data-v-17a5b1f9="">
+                    <span data-v-17a5b1f9="">Themes</span
+                    ><a data-v-17a5b1f9="" class="chip circle"><i data-v-17a5b1f9="">code</i></a>
+                  </h5>
+                </div>
+                <button data-v-17a5b1f9="" class="circle transparent" data-ui="#themes2">
+                  <i data-v-17a5b1f9="">close</i>
+                </button>
+              </nav>
+              <!---->
+            </header>
+            <div data-v-17a5b1f9="">
+              <nav data-v-17a5b1f9="" class="wrap">
+                <a data-v-17a5b1f9="" class="chip circle small"><i data-v-17a5b1f9="">light_mode</i></a
+                ><a data-v-17a5b1f9="" class="chip circle"
+                  ><i data-v-17a5b1f9="">palette</i><input data-v-17a5b1f9="" type="color" /></a
+                ><a data-v-17a5b1f9="" class="chip circle"
+                  ><i data-v-17a5b1f9="">upload</i><input data-v-17a5b1f9="" type="file" /></a
+                ><button data-v-17a5b1f9="" class="circle small red"></button
+                ><button data-v-17a5b1f9="" class="circle small pink"></button
+                ><button data-v-17a5b1f9="" class="circle small purple"></button
+                ><button data-v-17a5b1f9="" class="circle small deep-purple"></button
+                ><button data-v-17a5b1f9="" class="circle small indigo"></button
+                ><button data-v-17a5b1f9="" class="circle small blue"></button
+                ><button data-v-17a5b1f9="" class="circle small light-blue"></button
+                ><button data-v-17a5b1f9="" class="circle small cyan"></button
+                ><button data-v-17a5b1f9="" class="circle small teal"></button
+                ><button data-v-17a5b1f9="" class="circle small green"></button
+                ><button data-v-17a5b1f9="" class="circle small light-green"></button
+                ><button data-v-17a5b1f9="" class="circle small lime"></button
+                ><button data-v-17a5b1f9="" class="circle small yellow"></button
+                ><button data-v-17a5b1f9="" class="circle small amber"></button
+                ><button data-v-17a5b1f9="" class="circle small orange"></button
+                ><button data-v-17a5b1f9="" class="circle small deep-orange"></button
+                ><button data-v-17a5b1f9="" class="circle small brown"></button
+                ><button data-v-17a5b1f9="" class="circle small grey"></button
+                ><button data-v-17a5b1f9="" class="circle small blue-grey"></button
+                ><button data-v-17a5b1f9="" class="circle small black"></button
+                ><button data-v-17a5b1f9="" class="circle small white"></button>
+              </nav>
+            </div>
+            <!---->
+          </dialog>
+        </nav>
+        <nav class="top">
+          <button class="circle large small-margin transparent" data-ui="#menu-menu">
+            <i>menu</i
+            ><menu class="no-wrap" id="menu-menu" data-ui="#menu-menu"
+              ><a class="row" href="/gmail"
+                ><i>inbox</i>
+                <div class="max">Inbox</div></a
+              ><a class="row" href="/gmail/snoozed"
+                ><i>watch_later</i>
+                <div class="max">Snoozed</div></a
+              ><a class="row" href="/gmail/important"
+                ><i>label_important</i>
+                <div class="max">Important</div></a
+              ><a class="row" href="/gmail/sent"
+                ><i>send</i>
+                <div class="max">Sent</div></a
+              ><a class="row" href="/gmail/drafts"
+                ><i>insert_drive_file</i>
+                <div class="max">Drafts</div></a
+              ><a class="row" href="/gmail/spam"
+                ><i>error_outline</i>
+                <div class="max">Spam</div></a
+              ><a class="row" data-ui="#themes3"
+                ><i>palette</i>
+                <div class="max">Themes</div></a
+              ></menu
+            ></button
+          ><img src="/gmail-light.png" style="display: none" /><img src="/gmail-dark.png" />
+          <div class="max"></div>
+          <div class="max field round suffix prefix small no-margin m l white black-text">
+            <i class="front">search</i><input type="text" data-ui="#menu-search" placeholder=" " /><i class="front">mic</i>
+          </div>
+          <div class="max"></div>
+          <button class="circle large transparent s" data-ui="#dialog-search"><i>search</i></button
+          ><button class="circle large transparent m l" data-ui="#menu-settings">
+            <i>settings</i
+            ><menu class="left no-wrap" id="menu-settings" data-ui="#menu-settings"
+              ><a
+                ><div>Account</div>
+                <label>Change account</label></a
+              ><a
+                ><div>Appearance</div>
+                <label>Change display settings</label></a
+              ></menu
+            ></button
+          ><button class="circle large transparent m l" data-ui="#menu-apps">
+            <i>apps</i>
+            <!-- TODO: what is this and why does it botch the site? -->
+            <!-- <menu class="left padding no-wrap" id="menu-apps" data-ui="#menu-apps"
+              ><div class="grid no-space">
+                <div class="s4 center-align">
+                  <button class="transparent circle large"><img class="no-round" src="/calendar.png" /></button>
+                </div>
+                <div class="s4 center-align">
+                  <button class="transparent circle large"><img class="no-round" src="/keep.png" /></button>
+                </div>
+                <div class="s4 center-align">
+                  <button class="transparent circle large"><img class="no-round" src="/tasks.png" /></button>
+                </div>
+                <div class="s4 center-align">
+                  <button class="transparent circle large"><img class="no-round" src="/contacts.png" /></button>
+                </div>
+                <div class="s4 center-align">
+                  <button class="transparent circle large"><img class="no-round" src="/favicon.png" /></button>
+                </div>
+              </div>
+            </menu> -->
+            </button
+          ><button class="circle large small-margin transparent"><img class="responsive" src="/favicon.png" /></button>
+          <div data-v-17a5b1f9="" class="overlay"></div>
+          <dialog data-v-17a5b1f9="" class="medium left" id="themes3">
+            <header data-v-17a5b1f9="" class="fixed">
+              <nav data-v-17a5b1f9="">
+                <div data-v-17a5b1f9="" class="max">
+                  <h5 data-v-17a5b1f9="">
+                    <span data-v-17a5b1f9="">Themes</span
+                    ><a data-v-17a5b1f9="" class="chip circle"><i data-v-17a5b1f9="">code</i></a>
+                  </h5>
+                </div>
+                <button data-v-17a5b1f9="" class="circle transparent" data-ui="#themes3">
+                  <i data-v-17a5b1f9="">close</i>
+                </button>
+              </nav>
+              <!---->
+            </header>
+            <div data-v-17a5b1f9="">
+              <nav data-v-17a5b1f9="" class="wrap">
+                <a data-v-17a5b1f9="" class="chip circle small"><i data-v-17a5b1f9="">light_mode</i></a
+                ><a data-v-17a5b1f9="" class="chip circle"
+                  ><i data-v-17a5b1f9="">palette</i><input data-v-17a5b1f9="" type="color" /></a
+                ><a data-v-17a5b1f9="" class="chip circle"
+                  ><i data-v-17a5b1f9="">upload</i><input data-v-17a5b1f9="" type="file" /></a
+                ><button data-v-17a5b1f9="" class="circle small red"></button
+                ><button data-v-17a5b1f9="" class="circle small pink"></button
+                ><button data-v-17a5b1f9="" class="circle small purple"></button
+                ><button data-v-17a5b1f9="" class="circle small deep-purple"></button
+                ><button data-v-17a5b1f9="" class="circle small indigo"></button
+                ><button data-v-17a5b1f9="" class="circle small blue"></button
+                ><button data-v-17a5b1f9="" class="circle small light-blue"></button
+                ><button data-v-17a5b1f9="" class="circle small cyan"></button
+                ><button data-v-17a5b1f9="" class="circle small teal"></button
+                ><button data-v-17a5b1f9="" class="circle small green"></button
+                ><button data-v-17a5b1f9="" class="circle small light-green"></button
+                ><button data-v-17a5b1f9="" class="circle small lime"></button
+                ><button data-v-17a5b1f9="" class="circle small yellow"></button
+                ><button data-v-17a5b1f9="" class="circle small amber"></button
+                ><button data-v-17a5b1f9="" class="circle small orange"></button
+                ><button data-v-17a5b1f9="" class="circle small deep-orange"></button
+                ><button data-v-17a5b1f9="" class="circle small brown"></button
+                ><button data-v-17a5b1f9="" class="circle small grey"></button
+                ><button data-v-17a5b1f9="" class="circle small blue-grey"></button
+                ><button data-v-17a5b1f9="" class="circle small black"></button
+                ><button data-v-17a5b1f9="" class="circle small white"></button>
+              </nav>
+            </div>
+            <!---->
+          </dialog>
+        </nav>
+        <main class="responsive max">
+          <div class="overlay"></div>
+          <dialog class="round large-width" id="dialog-add">
+            <nav>
+              <button class="circle transparent" data-ui="#dialog-add"><i>arrow_back</i></button>
+              <h5>New mail</h5>
+              <div class="max"></div>
+              <button class="circle transparent" data-ui="#dialog-add"><i>attach_file</i></button
+              ><button class="circle transparent" data-ui="#dialog-add"><i>send</i></button>
+            </nav>
+            <div class="grid">
+              <div class="s12">
+                <div class="field label border"><input type="text" placeholder=" " /><label>From</label></div>
+              </div>
+              <div class="s12">
+                <div class="field label border"><input type="text" placeholder=" " /><label>To</label></div>
+              </div>
+              <div class="s12">
+                <div class="field label border"><input type="text" placeholder=" " /><label>Subject</label></div>
+              </div>
+              <div class="s12">
+                <div class="field label border textarea"><textarea placeholder=" "></textarea><label>Message</label></div>
+              </div>
+            </div>
+          </dialog>
+          <div class="overlay"></div>
+          <dialog class="top-round bottom" id="dialog-add-small">
+            <nav>
+              <button class="circle transparent" data-ui="#dialog-add-small"><i>arrow_back</i></button>
+              <h5>New mail</h5>
+              <div class="max"></div>
+              <button class="circle transparent" data-ui="#dialog-add-small"><i>attach_file</i></button
+              ><button class="circle transparent" data-ui="#dialog-add-small"><i>send</i></button>
+            </nav>
+            <div class="grid">
+              <div class="s12">
+                <div class="field label border"><input type="text" placeholder=" " /><label>From</label></div>
+              </div>
+              <div class="s12">
+                <div class="field label border"><input type="text" placeholder=" " /><label>To</label></div>
+              </div>
+              <div class="s12">
+                <div class="field label border"><input type="text" placeholder=" " /><label>Subject</label></div>
+              </div>
+              <div class="s12">
+                <div class="field label border textarea"><textarea placeholder=" "></textarea><label>Message</label></div>
+              </div>
+            </div>
+          </dialog>
+          <div class="overlay"></div>
+          <dialog class="top transparent" id="dialog-search">
+            <nav>
+              <div class="max m l"></div>
+              <div class="max field round suffix prefix small no-margin white black-text">
+                <i class="front">search</i><input type="text" placeholder=" " /><i class="front">mic</i>
+              </div>
+              <div class="max m l"></div>
+            </nav>
+          </dialog>
+          <div class="page right active">
+            <div class="row m l">
+              <label class="checkbox"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent"><i>refresh</i></button
+              ><button class="circle transparent"><i>more_vert</i></button>
+              <div class="max"></div>
+              <label>from 1 to 30</label><button class="circle transparent"><i>arrow_back</i></button
+              ><button class="circle transparent"><i>arrow_forward</i></button>
+            </div>
+            <div class="space m l"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+            <a class="row"
+              ><label class="checkbox m l"><input type="checkbox" /><span></span></label
+              ><button class="circle transparent m l">
+                <i>star_outline</i><i class="yellow-text" style="display: none">star</i></button
+              ><button class="small circle s">A</button>
+              <div class="max truncate">
+                <b>From -&nbsp;</b><b>Subject -&nbsp;</b
+                ><span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</span
+                >
+              </div>
+              <label>12:03</label></a
+            >
+            <div class="divider m l"></div>
+            <div class="small-divider s"></div>
+          </div>
+          <!----><!----><!----><!----><!---->
+        </main>
+      </div>
+    </div>
+    <script src="/__/firebase/8.2.9/firebase-app.js"></script>
+    <script src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
